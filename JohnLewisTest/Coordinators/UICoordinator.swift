@@ -21,6 +21,7 @@ class UICoordinator: AppNavigation {
     
     // Present the main experience
     func presentMain() {
-    
+        let productGridRouter = ProductGridRouter()
+        productGridRouter.presentAsRootViewController(on: window)
     }
 }
