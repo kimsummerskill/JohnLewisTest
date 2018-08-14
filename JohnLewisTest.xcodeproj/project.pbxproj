@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		91916D682122E05B0054FD8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916D672122E05B0054FD8D /* AppDelegate.swift */; };
-		91916D6A2122E05B0054FD8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916D692122E05B0054FD8D /* ViewController.swift */; };
 		91916D6D2122E05B0054FD8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91916D6B2122E05B0054FD8D /* Main.storyboard */; };
 		91916D6F2122E05C0054FD8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91916D6E2122E05C0054FD8D /* Assets.xcassets */; };
 		91916D722122E05C0054FD8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91916D702122E05C0054FD8D /* LaunchScreen.storyboard */; };
@@ -20,6 +19,8 @@
 		91916DA82122E3B20054FD8D /* UICoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DA72122E3B20054FD8D /* UICoordinator.swift */; };
 		91916DAA2122E3D70054FD8D /* FlowCorrdinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DA92122E3D70054FD8D /* FlowCorrdinator.swift */; };
 		91916DAC2122E4060054FD8D /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DAB2122E4060054FD8D /* AppNavigation.swift */; };
+		91916DAE2122E6280054FD8D /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DAD2122E6280054FD8D /* SplashScreenViewController.swift */; };
+		91916DB02122ECE30054FD8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DAF2122ECE30054FD8D /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,6 @@
 /* Begin PBXFileReference section */
 		91916D642122E05B0054FD8D /* JohnLewisTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JohnLewisTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91916D672122E05B0054FD8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91916D692122E05B0054FD8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		91916D6C2122E05B0054FD8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91916D6E2122E05C0054FD8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91916D712122E05C0054FD8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +59,8 @@
 		91916DA72122E3B20054FD8D /* UICoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICoordinator.swift; sourceTree = "<group>"; };
 		91916DA92122E3D70054FD8D /* FlowCorrdinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCorrdinator.swift; sourceTree = "<group>"; };
 		91916DAB2122E4060054FD8D /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
+		91916DAD2122E6280054FD8D /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		91916DAF2122ECE30054FD8D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +166,8 @@
 		91916D982122E1680054FD8D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				91916D692122E05B0054FD8D /* ViewController.swift */,
+				91916DAF2122ECE30054FD8D /* ViewController.swift */,
+				91916DAD2122E6280054FD8D /* SplashScreenViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -362,9 +365,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91916D6A2122E05B0054FD8D /* ViewController.swift in Sources */,
 				91916D682122E05B0054FD8D /* AppDelegate.swift in Sources */,
+				91916DAE2122E6280054FD8D /* SplashScreenViewController.swift in Sources */,
 				91916DA42122E34D0054FD8D /* MVVMRouter.swift in Sources */,
+				91916DB02122ECE30054FD8D /* ViewController.swift in Sources */,
 				91916DA62122E3820054FD8D /* MVVMViewModel.swift in Sources */,
 				91916DA82122E3B20054FD8D /* UICoordinator.swift in Sources */,
 				91916DAA2122E3D70054FD8D /* FlowCorrdinator.swift in Sources */,
