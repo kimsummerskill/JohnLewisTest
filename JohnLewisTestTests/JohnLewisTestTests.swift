@@ -21,16 +21,63 @@ class JohnLewisTestTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testSearchResult() {
+        
+        let bundle = Bundle(for: JohnLewisTestTests.self)
+        
+        if let path = bundle.path(forResource: "DishwasherSearchResult", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let result = try data.decodeDataToObjects(with: ProductsService.RequestType.productSearch)
+                
+                // test object graph fron json
+                XCTAssertTrue(result is ProductsModel)
+                
+                if let result = result as? ProductsModel {
+                    XCTAssertTrue(result.items.count == 20)
+                    XCTAssertNotNil(result.model(at: result.items.count-1))
+                    XCTAssertNil(result.model(at: result.items.count))
+                }
+            }
+            catch {
+                XCTFail("Failed to decode DishwasherSearchResult.json into objects")
+            }
         }
     }
     
+    // Test various types of 'no result' or 'no json' or 'bad result'
+    func testNoSearchResult() {
+        let bundle = Bundle(for: JohnLewisTestTests.self)
+        if let path = bundle.path(forResource: "DishwasherSearchNoResult", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                XCTAssertThrowsError(try data.decodeDataToObjects(with: ProductsService.RequestType.productSearch))
+            }
+            catch {
+                
+            }
+        }
+    }
+    
+    // Ensure the URL is formatted and encoded correctly and that a bad URL is handled
+    func testProductsServiceURL() {
+        let productsService = ProductsService()
+        
+        // Test URL format
+        XCTAssertNil(productsService.urlFor(requestType: ProductsService.RequestType.productSearch, context: nil))
+        
+         // Ensure not allowed character is percent encoded
+        XCTAssertTrue(productsService.urlFor(requestType: ProductsService.RequestType.productSearch, context: "|")?.absoluteString.range(of: "|") == nil)
+        
+        // Ensure normal search produces URL
+        XCTAssertNotNil(productsService.urlFor(requestType: ProductsService.RequestType.productSearch, context: "dishwasher"))
+        
+    }
+    
+    // Note: As this is a test I am not sure if I shoulod be exhaustive or just indicate what I would do here.
+    // I would normally create a protocol for the service that I could use for this test and mimic the behavior of the
+    // service failure routes.
+    func testServiceFailResponse() {
+        
+    }
 }

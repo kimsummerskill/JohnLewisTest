@@ -24,6 +24,13 @@
 		91916DB22122EDE90054FD8D /* ProductGridRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DB12122EDE90054FD8D /* ProductGridRouter.swift */; };
 		91916DB42122EE140054FD8D /* UIWindow+RootTransitition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DB32122EE140054FD8D /* UIWindow+RootTransitition.swift */; };
 		91916DB62122EE620054FD8D /* ProductGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DB52122EE620054FD8D /* ProductGridViewModel.swift */; };
+		91916DB82122F4BD0054FD8D /* ProductsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DB72122F4BD0054FD8D /* ProductsService.swift */; };
+		91916DBA2122F4DB0054FD8D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DB92122F4DB0054FD8D /* Result.swift */; };
+		91916DBC2122F83E0054FD8D /* ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DBB2122F83E0054FD8D /* ProductsModel.swift */; };
+		91916DC02122F89A0054FD8D /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DBF2122F89A0054FD8D /* ProductModel.swift */; };
+		91916DC22122F9E40054FD8D /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DC12122F9E30054FD8D /* PriceModel.swift */; };
+		91916DC521230C9F0054FD8D /* DishwasherSearchResult.json in Resources */ = {isa = PBXBuildFile; fileRef = 91916DC421230C9F0054FD8D /* DishwasherSearchResult.json */; };
+		91916DC721231ACC0054FD8D /* DishwasherSearchNoResult.json in Resources */ = {isa = PBXBuildFile; fileRef = 91916DC621231ACC0054FD8D /* DishwasherSearchNoResult.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +74,13 @@
 		91916DB12122EDE90054FD8D /* ProductGridRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGridRouter.swift; sourceTree = "<group>"; };
 		91916DB32122EE140054FD8D /* UIWindow+RootTransitition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+RootTransitition.swift"; sourceTree = "<group>"; };
 		91916DB52122EE620054FD8D /* ProductGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGridViewModel.swift; sourceTree = "<group>"; };
+		91916DB72122F4BD0054FD8D /* ProductsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsService.swift; sourceTree = "<group>"; };
+		91916DB92122F4DB0054FD8D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		91916DBB2122F83E0054FD8D /* ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModel.swift; sourceTree = "<group>"; };
+		91916DBF2122F89A0054FD8D /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		91916DC12122F9E30054FD8D /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
+		91916DC421230C9F0054FD8D /* DishwasherSearchResult.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DishwasherSearchResult.json; sourceTree = "<group>"; };
+		91916DC621231ACC0054FD8D /* DishwasherSearchNoResult.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DishwasherSearchNoResult.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +152,7 @@
 		91916D7B2122E05C0054FD8D /* JohnLewisTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				91916DC321230C520054FD8D /* TestData */,
 				91916D7C2122E05C0054FD8D /* JohnLewisTestTests.swift */,
 				91916D7E2122E05C0054FD8D /* Info.plist */,
 			);
@@ -190,6 +205,9 @@
 		91916D9A2122E1750054FD8D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				91916DBB2122F83E0054FD8D /* ProductsModel.swift */,
+				91916DBF2122F89A0054FD8D /* ProductModel.swift */,
+				91916DC12122F9E30054FD8D /* PriceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,6 +222,7 @@
 		91916D9C2122E17F0054FD8D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				91916DB72122F4BD0054FD8D /* ProductsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -222,6 +241,7 @@
 		91916D9E2122E18B0054FD8D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				91916DB92122F4DB0054FD8D /* Result.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -241,6 +261,15 @@
 				91916DA92122E3D70054FD8D /* FlowCorrdinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		91916DC321230C520054FD8D /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				91916DC621231ACC0054FD8D /* DishwasherSearchNoResult.json */,
+				91916DC421230C9F0054FD8D /* DishwasherSearchResult.json */,
+			);
+			path = TestData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +386,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91916DC521230C9F0054FD8D /* DishwasherSearchResult.json in Resources */,
+				91916DC721231ACC0054FD8D /* DishwasherSearchNoResult.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,9 +406,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				91916D682122E05B0054FD8D /* AppDelegate.swift in Sources */,
+				91916DBC2122F83E0054FD8D /* ProductsModel.swift in Sources */,
 				91916DB42122EE140054FD8D /* UIWindow+RootTransitition.swift in Sources */,
 				91916DAE2122E6280054FD8D /* SplashScreenViewController.swift in Sources */,
+				91916DC22122F9E40054FD8D /* PriceModel.swift in Sources */,
 				91916DB22122EDE90054FD8D /* ProductGridRouter.swift in Sources */,
+				91916DBA2122F4DB0054FD8D /* Result.swift in Sources */,
 				91916DB62122EE620054FD8D /* ProductGridViewModel.swift in Sources */,
 				91916DA42122E34D0054FD8D /* MVVMRouter.swift in Sources */,
 				91916DB02122ECE30054FD8D /* ProductGridViewController.swift in Sources */,
@@ -386,6 +420,8 @@
 				91916DAA2122E3D70054FD8D /* FlowCorrdinator.swift in Sources */,
 				91916DA22122E32E0054FD8D /* MVVMViewController.swift in Sources */,
 				91916DAC2122E4060054FD8D /* AppNavigation.swift in Sources */,
+				91916DB82122F4BD0054FD8D /* ProductsService.swift in Sources */,
+				91916DC02122F89A0054FD8D /* ProductModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

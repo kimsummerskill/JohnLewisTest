@@ -14,14 +14,20 @@ class ProductGridViewController: UIViewController, MVVMViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        viewModel.onDataUpdate = { [weak self] in
+            DispatchQueue.main.async {
+                guard let `self` = self else { return }
+                self.reloadData()
+            }
+        }
+        
+        self.viewModel.fetchProductCategory(with: nil)
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func reloadData() {
+        
     }
-
-
 }
 
