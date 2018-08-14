@@ -14,6 +14,12 @@
 		91916D722122E05C0054FD8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91916D702122E05C0054FD8D /* LaunchScreen.storyboard */; };
 		91916D7D2122E05C0054FD8D /* JohnLewisTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916D7C2122E05C0054FD8D /* JohnLewisTestTests.swift */; };
 		91916D882122E05C0054FD8D /* JohnLewisTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916D872122E05C0054FD8D /* JohnLewisTestUITests.swift */; };
+		91916DA22122E32E0054FD8D /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DA12122E32E0054FD8D /* MVVMViewController.swift */; };
+		91916DA42122E34D0054FD8D /* MVVMRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DA32122E34D0054FD8D /* MVVMRouter.swift */; };
+		91916DA62122E3820054FD8D /* MVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DA52122E3820054FD8D /* MVVMViewModel.swift */; };
+		91916DA82122E3B20054FD8D /* UICoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DA72122E3B20054FD8D /* UICoordinator.swift */; };
+		91916DAA2122E3D70054FD8D /* FlowCorrdinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DA92122E3D70054FD8D /* FlowCorrdinator.swift */; };
+		91916DAC2122E4060054FD8D /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91916DAB2122E4060054FD8D /* AppNavigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		91916D832122E05C0054FD8D /* JohnLewisTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JohnLewisTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91916D872122E05C0054FD8D /* JohnLewisTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JohnLewisTestUITests.swift; sourceTree = "<group>"; };
 		91916D892122E05C0054FD8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91916DA12122E32E0054FD8D /* MVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
+		91916DA32122E34D0054FD8D /* MVVMRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMRouter.swift; sourceTree = "<group>"; };
+		91916DA52122E3820054FD8D /* MVVMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewModel.swift; sourceTree = "<group>"; };
+		91916DA72122E3B20054FD8D /* UICoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICoordinator.swift; sourceTree = "<group>"; };
+		91916DA92122E3D70054FD8D /* FlowCorrdinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCorrdinator.swift; sourceTree = "<group>"; };
+		91916DAB2122E4060054FD8D /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +200,10 @@
 		91916D9D2122E1850054FD8D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				91916DA12122E32E0054FD8D /* MVVMViewController.swift */,
+				91916DA32122E34D0054FD8D /* MVVMRouter.swift */,
+				91916DA52122E3820054FD8D /* MVVMViewModel.swift */,
+				91916DAB2122E4060054FD8D /* AppNavigation.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -209,6 +225,8 @@
 		91916DA02122E19B0054FD8D /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				91916DA72122E3B20054FD8D /* UICoordinator.swift */,
+				91916DA92122E3D70054FD8D /* FlowCorrdinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -346,6 +364,12 @@
 			files = (
 				91916D6A2122E05B0054FD8D /* ViewController.swift in Sources */,
 				91916D682122E05B0054FD8D /* AppDelegate.swift in Sources */,
+				91916DA42122E34D0054FD8D /* MVVMRouter.swift in Sources */,
+				91916DA62122E3820054FD8D /* MVVMViewModel.swift in Sources */,
+				91916DA82122E3B20054FD8D /* UICoordinator.swift in Sources */,
+				91916DAA2122E3D70054FD8D /* FlowCorrdinator.swift in Sources */,
+				91916DA22122E32E0054FD8D /* MVVMViewController.swift in Sources */,
+				91916DAC2122E4060054FD8D /* AppNavigation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
