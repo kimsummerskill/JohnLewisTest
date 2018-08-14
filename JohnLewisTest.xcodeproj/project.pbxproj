@@ -97,11 +97,19 @@
 		91916D662122E05B0054FD8D /* JohnLewisTest */ = {
 			isa = PBXGroup;
 			children = (
+				91916DA02122E19B0054FD8D /* Coordinators */,
+				91916D9F2122E1900054FD8D /* Extensions */,
+				91916D9E2122E18B0054FD8D /* Helpers */,
+				91916D9D2122E1850054FD8D /* Protocols */,
+				91916D9C2122E17F0054FD8D /* Services */,
+				91916D9B2122E17A0054FD8D /* Views */,
+				91916D9A2122E1750054FD8D /* Models */,
+				91916D992122E16E0054FD8D /* ViewModels */,
+				91916D982122E1680054FD8D /* ViewControllers */,
+				91916D972122E1610054FD8D /* Routers */,
+				91916D962122E1590054FD8D /* Storyboards */,
 				91916D672122E05B0054FD8D /* AppDelegate.swift */,
-				91916D692122E05B0054FD8D /* ViewController.swift */,
-				91916D6B2122E05B0054FD8D /* Main.storyboard */,
 				91916D6E2122E05C0054FD8D /* Assets.xcassets */,
-				91916D702122E05C0054FD8D /* LaunchScreen.storyboard */,
 				91916D732122E05C0054FD8D /* Info.plist */,
 			);
 			path = JohnLewisTest;
@@ -123,6 +131,86 @@
 				91916D892122E05C0054FD8D /* Info.plist */,
 			);
 			path = JohnLewisTestUITests;
+			sourceTree = "<group>";
+		};
+		91916D962122E1590054FD8D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				91916D6B2122E05B0054FD8D /* Main.storyboard */,
+				91916D702122E05C0054FD8D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		91916D972122E1610054FD8D /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		91916D982122E1680054FD8D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				91916D692122E05B0054FD8D /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		91916D992122E16E0054FD8D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		91916D9A2122E1750054FD8D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		91916D9B2122E17A0054FD8D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		91916D9C2122E17F0054FD8D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		91916D9D2122E1850054FD8D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		91916D9E2122E18B0054FD8D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		91916D9F2122E1900054FD8D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		91916DA02122E19B0054FD8D /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -417,7 +505,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -430,7 +518,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KDASGFE3NU;
 				INFOPLIST_FILE = JohnLewisTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -438,6 +527,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cyberdine.JohnLewisTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "06f1c0b7-f1a4-44e1-a876-528b9a40e15a";
+				PROVISIONING_PROFILE_SPECIFIER = "Cyberdine Wildcard Development";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,7 +538,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KDASGFE3NU;
 				INFOPLIST_FILE = JohnLewisTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,6 +547,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cyberdine.JohnLewisTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "06f1c0b7-f1a4-44e1-a876-528b9a40e15a";
+				PROVISIONING_PROFILE_SPECIFIER = "Cyberdine Wildcard Development";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
