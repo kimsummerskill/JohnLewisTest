@@ -59,6 +59,17 @@ class JohnLewisTestTests: XCTestCase {
         }
     }
     
+    func testCurrencyConversion() {
+        let ukcode = "GBP"
+        let val = 100.0
+    
+        XCTAssertEqual(Conversion().currencyString(with: ukcode, value: val), "£100.00")
+        
+        let usacode = "USD"
+        
+        XCTAssertEqual(Conversion().currencyString(with: usacode, value: val), "$100.00")
+    }
+    
     // Ensure the URL is formatted and encoded correctly and that a bad URL is handled
     func testProductsServiceURL() {
         let productsService = ProductsService()

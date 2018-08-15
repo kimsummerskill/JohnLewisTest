@@ -11,17 +11,21 @@ import UIKit
 class ProductGridViewModel: MVVMViewModel {
     var router: MVVMRouter
     let productsService = ProductsService()
-    var ProductsModel: ProductsModel?
+    var productsModel: ProductsModel?
     var onDataUpdate:(() -> Void)?
-    var defaultCategoryString: String = "dishwasher"
-    
+    var categorySearchString: String = "dishwasher"
+    let productCellReuseIdentifier = "productGridProductCell"
     required init(router: MVVMRouter) {
         self.router = router
     }
     
     func fetchProductCategory(with category: String?) {
-        let categoryString = category == nil ? defaultCategoryString : category
-        fetchResults(with: ProductsService.RequestType.productSearch, context: categoryString)
+       
+        if let categoryString = category {
+            categorySearchString = categoryString
+        }
+        
+        fetchResults(with: ProductsService.RequestType.productSearch, context: categorySearchString)
     }
 
     fileprivate func fetchResults(with requestType: ProductsService.RequestType, context: Any?) {
@@ -58,7 +62,36 @@ class ProductGridViewModel: MVVMViewModel {
     
     // Store our results and call the update
     func updateResults(with result: ProductsModel) {
-        ProductsModel = result
+        productsModel = result
         onDataUpdate?()
+    }
+    
+    // This would be localised in a real world scenario
+    func titleForGrid() -> String {
+        return "\(categorySearchString.capitalized)s (\(productsModel?.items.count ?? 0))"
+    }
+    
+    // MARK: UICollectionViewDataSource methods
+    
+    func numberOfItems(in section: Int) -> Int {
+        guard let products = productsModel else {
+            return 0
+        }
+        
+        return products.items.count
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cellModel = productsModel?.model(at: indexPath.row) else {
+            return ProductGridProductCell()
+        }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productCellReuseIdentifier, for: indexPath) as! ProductGridProductCell
+        
+        cell.update(with: cellModel)
+        
+        return cell
     }
 }
